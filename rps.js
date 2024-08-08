@@ -4,9 +4,9 @@
 // Return value as String
 
 // Get User Input (Rock, Paper or Scissor) make it case insensetive display undefined if user doesnt make a valid choice
-
 let humanScore = 0;
-let computerScore = 0;
+let computerScore = 0
+
 
 
 function getComputerChoice(ComputerChoice) {
@@ -38,54 +38,52 @@ function getHumanChoice(HumanChoice) {
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice == "rock" && computerChoice == "paper"){
-        computerScore = computerScore + 1;
-        result = alert("You lost");
+        computerScore++;
+        return "You Lost";
 
     }
     else if (humanChoice == "rock" && computerChoice == "scissor") {
-        humanScore = humanScore +1;
-        result = alert("You Won");
+        humanScore++;
+        return "You Won";
     }
     else if (humanChoice == "paper" && computerChoice == "scissor") {
-        computerScore = computerScore + 1;
-        result = alert("You Lost");
+        computerScore++;
+        return "You Lost";
     }
     else if (humanChoice == "paper" && computerChoice == "rock") {
-        humanScore = humanScore + 1;
-        result = alert("You Won");
+        humanScore++;
+        return "You Won";
     }
     else if (humanChoice == "scissor" && computerChoice == "rock") {
-        computerScore = computerScore + 1;
-        result = alert("You Lost");
+        computerScore++;
+        return "You Lost";
     }
     else if (humanChoice == "scissor" && computerChoice == "paper") {
-        humanScore = humanScore + 1;
-        result = alert("You Won");
+        humanScore++;
+        return "You Won";
     }
     else{
-        result = alert("Tie")
+        return "Tie";
     }
-    return result;    
+    
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-function playGame(){
-    for(i=0;i<5;++i){
-    playRound(humanSelection, computerSelection)
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+        const result = playRound(humanChoice, computerChoice);
+        alert(`Round ${i + 1}: ${result}\nYour choice: ${humanChoice}\nComputer's choice: ${computerChoice}\nYour Score: ${humanScore}\nComputer's Score: ${computerScore}`);
     }
-    if(playRound == "You Won") {
-        humanScore = humanScore +1;
-        currentScore = alert(`Your Score: ${humanScore}. Computer Score: ${computerScore}.`);
+    if (humanScore > computerScore) {
+        alert("Congratulations! You won the game!");
+    } else if (humanScore < computerScore) {
+        alert("Sorry, you lost the game.");
+    } else {
+        alert("The game is a tie.");
     }
-    else if(playRound == "You Lost"){
-        computerScore = computerScore +1;
-        currentScore = alert(`Your Score: ${humanScore}. Computer Score: ${computerScore}.`);
-    }
-    return currentScore
 }
-
-
-
-
+playGame();
