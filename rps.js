@@ -8,6 +8,7 @@
 let humanScore = 0;
 let computerScore = 0;
 
+
 function getComputerChoice(ComputerChoice) {
 
     ComputerChoice = Math.floor(Math.random() * 3) + 1;
@@ -70,7 +71,21 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection)
+function playGame(){
+    for(i=0;i<5;++i){
+    playRound(humanSelection, computerSelection)
+    }
+    if(playRound == "You Won") {
+        humanScore = humanScore +1;
+        currentScore = alert(`Your Score: ${humanScore}. Computer Score: ${computerScore}.`);
+    }
+    else if(playRound == "You Lost"){
+        computerScore = computerScore +1;
+        currentScore = alert(`Your Score: ${humanScore}. Computer Score: ${computerScore}.`);
+    }
+    return currentScore
+}
+
 
 
 
