@@ -2,7 +2,6 @@
 // let computer generate random number between 1-3
 // Link "Rock", "Paper", "Scissor" to numbers 1-3
 // Return value as String
-
 // Get User Input (Rock, Paper or Scissor) make it case insensetive display undefined if user doesnt make a valid choice
 let humanScore = 0;
 let computerScore = 0
@@ -68,22 +67,21 @@ function playRound(humanChoice, computerChoice) {
     
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-        const result = playRound(humanChoice, computerChoice);
-        alert(`Round ${i + 1}: ${result}\nYour choice: ${humanChoice}\nComputer's choice: ${computerChoice}\nYour Score: ${humanScore}\nComputer's Score: ${computerScore}`);
-    }
-    if (humanScore > computerScore) {
-        alert("Congratulations! You won the game!");
-    } else if (humanScore < computerScore) {
-        alert("Sorry, you lost the game.");
-    } else {
-        alert("The game is a tie.");
-    }
-}
-playGame();
+//function playGame() {
+
+//    for (let i = 0; i < 5; i++) {
+  //      const humanChoice = getHumanChoice();
+    //    const computerChoice = getComputerChoice();
+      //  const result = playRound(humanChoice, computerChoice);
+        //alert(`Round ${i + 1}: ${result}\nYour choice: ${humanChoice}\nComputer's choice: ${computerChoice}\nYour Score: ${humanScore}\nComputer's Score: ${computerScore}`);
+    //}
+    //if (humanScore > computerScore) {
+     //   alert("Congratulations! You won the game!");
+    //} else if (humanScore < computerScore) {
+      //  alert("Sorry, you lost the game.");
+    //} else {
+      //  alert("The game is a tie.");
+    //}
+//}
+//playGame();

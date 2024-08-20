@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+ }
+ html {
+    background-color: #2e86ab;
+
+ }
+
+ h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: #f6f5ae;
+ }
+
+ .Container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+ }
+
+ button {
+    padding: 8px;
+    margin: 20px;
+    width: 60px;
+    background-color: #564138;
+    color: #f6f5ae;
+    border-radius: 6px;
+ }
+
+ .playerChoices {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 400px;
+    height: 200px;
+    background-color:#564138;
+    border: 1px #564138;
+ }
+
+ .playerLifes {
+    display: flex;
+    justify-content: center;
+    background-color: #564138;
+    border: 1px #564138;
+    width: 200px;
+    height: 50px;
+    margin-right: 20px;
+    
+ }
+
+ .computerLifes {
+    display: flex;
+    justify-content: center;
+    background-color: #564138;
+    border: 1px #564138;
+    width: 200px;
+    height: 50px;
+
+ }
+
+ .scoreContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+ }
+
