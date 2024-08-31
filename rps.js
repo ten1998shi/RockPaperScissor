@@ -11,6 +11,7 @@ const computerLifes = document.getElementById("computerLifes");
 const buttonRock = document.getElementById("buttonRock");
 const buttonPaper = document.getElementById("buttonPaper");
 const buttonScissor = document.getElementById("buttonScissor");
+const gameResult = document.getElementById("gameResult");
 
 function getComputerChoice(){
 
@@ -74,6 +75,22 @@ function playGame(player, computer){
     else if(choiceValue === 3 & randomNum === 2){
         computerLifes = Number(computerLifes) -= 1;
         console.log("You won scissor beats paper")
+    }
+
+}
+
+function playFiveRounds(){
+    while(playerLifes >= 0 & computerLifes >= 0){
+        playGame();
+
+        if(playerLifes === 0){
+           console.log("You lost all of your Lifes! GAMEOVER!") 
+           break;
+        }
+        else if(computerLifes === 0){
+            console.log("The computer has no lifes left! YOU WON!")
+            break;
+        }
     }
 
 }
