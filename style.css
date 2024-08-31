@@ -32,7 +32,7 @@
     border-radius: 6px;
  }
 
- .playerChoices {
+ #playerChoices {
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -44,7 +44,7 @@
     border: 1px #564138;
  }
 
- .playerLifes {
+ #playerLifes {
     display: flex;
     justify-content: center;
     background-color: #564138;
@@ -55,7 +55,7 @@
     
  }
 
- .computerLifes {
+ #computerLifes {
     display: flex;
     justify-content: center;
     background-color: #564138;
