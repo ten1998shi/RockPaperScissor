@@ -15,8 +15,66 @@ const buttonScissor = document.getElementById("buttonScissor");
 function getComputerChoice(){
 
     let randomNum = Math.floor(Math.random() * 3) + 1;
-    console.log(randomNum);
+   
+    return randomNum;
+}
+
+function getPlayerChoice(){
+
+  
+    let choiceValue;
+
+    if(buttonRock){
+        choiceValue = 1;
+    }
+    else if(buttonPaper){
+        choiceValue = 2;
+
+    }
+    else{
+        choiceValue = 3;
+    }
+
+    return choiceValue;
+}
+
+
+function playGame(player, computer){
+    const playerLifes = 5;
+    const computerLifes = 5;
+    if(choiceValue === randomNum){
+        
+        console.log("YIts a Tie")
+    }
+
+    else if(choiceValue === 1 & randomNum === 2){
+        playerLifes = Number(playerLifes) -= 1;
+        console.log("You lost paper beats rock");
+    }
+
+    else if(choiceValue === 2 & randomNum === 3){
+        playerLifes = Number(playerLifes) -= 1;
+        console.log("You lost scissor beats paper");
+    }
+
+    else if(choiceValue === 3 & randomNum === 1){
+        playerLifes = Number(playerLifes) -= 1;
+        console.log("You lost rock beats scissor");
+
+    }
+
+    else if(choiceValue === 1 & randomNum === 3){
+        computerLifes = Number(computerLifes) -= 1;
+        console.log("You won rock beats scissor");
+    }
+    else if(choiceValue === 2 & randomNum === 1){
+        computerLifes = Number(computerLifes) -= 1;
+        console.log("You won paper beats rock");
+    }
+    else if(choiceValue === 3 & randomNum === 2){
+        computerLifes = Number(computerLifes) -= 1;
+        console.log("You won scissor beats paper")
+    }
 
 }
 
-getComputerChoice();
