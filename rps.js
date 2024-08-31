@@ -13,7 +13,10 @@ const buttonPaper = document.getElementById("buttonPaper");
 const buttonScissor = document.getElementById("buttonScissor");
 
 function getComputerChoice(){
-    
 
+    let randomNum = Math.floor(Math.random() * 3) + 1;
+    console.log(randomNum);
 
 }
+
+getComputerChoice();
