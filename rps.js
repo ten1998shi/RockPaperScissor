@@ -20,11 +20,7 @@ function getComputerChoice(){
     return randomNum;
 }
 
-function getPlayerChoice(){
-
-  
-    let choiceValue;
-
+function getPlayerChoice(choiceValue){
     if(buttonRock){
         choiceValue = 1;
     }
@@ -40,12 +36,12 @@ function getPlayerChoice(){
 }
 
 
-function playGame(player, computer){
-    const playerLifes = 5;
-    const computerLifes = 5;
+function playGame(choiceValue, randomNum){
+    let playerLifes = 5;
+    let computerLifes = 5;
     if(choiceValue === randomNum){
         
-        console.log("YIts a Tie")
+        console.log("Its a Tie")
     }
 
     else if(choiceValue === 1 & randomNum === 2){
@@ -79,7 +75,7 @@ function playGame(player, computer){
 
 }
 
-function playFiveRounds(){
+/*function playFiveRounds(){
     while(playerLifes >= 0 & computerLifes >= 0){
         playGame();
 
@@ -95,3 +91,6 @@ function playFiveRounds(){
 
 }
 
+playFiveRounds();*/
+
+//playGame();
